@@ -7,6 +7,18 @@
 <script>
 /* JAVASCRIPT STARTS HERE  */
 
+var clock = {
+
+	title:"";
+	but15:0;
+	but18:0;
+	but21:0;
+	but22:0;
+	but23:0;
+	but00:0;
+
+};
+
 
 /* JAVASCRIPT ENDS HERE  */
 </script>
@@ -15,10 +27,12 @@
 <body>
 
 <div>
+	<div><b><input type="text"></b></div>
 	<span>
-		<button id="but15" type="button" class="buttonbig" >15:00</button><button id="but18" type="button" class="buttonbig" >18:00</button><button id="but21" type="button" class="buttonbig" >21:00</button><button id="but22" type="button" class="buttonsmall">22:00</button><button id="but23" type="button" class="buttonsmall" >23:00</button><button id="but00" type="button" class="buttonsmall" >00:00</button>
+		<button id="but15" type="button" class="buttonbig" onclick="pushed('but15')">15:00</button><button id="but18" type="button" class="buttonbig" onclick="pushed()">18:00</button><button id="but21" type="button" class="buttonbig" onclick="pushed()">21:00</button><button id="but22" type="button" class="buttonsmall" onclick="pushed(but22)">22:00</button><button id="but23" type="button" class="buttonsmall" onclick="pushed(but23)">23:00</button><button id="but00" type="button" class="buttonsmall" onclick="pushed(but00)">00:00</button>
 </span>
 </div>
-
+<div id="addbefore"></div>
+<div><p><button id="add" type="button">+</button></p></div>
 </body>
 </html>

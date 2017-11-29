@@ -1,10 +1,15 @@
 /* clocks css style sheet */
+input[type="text"]
+{
+    font-size:24px;
+    font-weight: bold;
+}
 
 .buttonbig {
 
   width: 200px;
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid grey;
   border-radius: 1px;
   color: black;
   padding: 16px 32px;
@@ -20,7 +25,7 @@
 
   width: 100px;
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid grey;
   border-radius: 1px;
   color: black;
   padding: 16px 32px;
