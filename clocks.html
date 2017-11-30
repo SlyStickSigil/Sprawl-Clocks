@@ -7,18 +7,30 @@
 <script>
 /* JAVASCRIPT STARTS HERE  */
 
-var clock = {
+function buttonObj(name){
 
-	title:"";
-	but15:0;
-	but18:0;
-	but21:0;
-	but22:0;
-	but23:0;
-	but00:0;
+	this.name = name;
+	this.buttonState = 0;
 
-};
+}
 
+var but15 = new buttonObj("but15");
+var but18 = new buttonObj("but18");
+var but21 = new buttonObj("but21");
+var but22 = new buttonObj("but22");
+var but23 = new buttonObj("but23");
+var but00 = new buttonObj("but00");
+
+
+function pushed(buttonObj){
+	if (buttonObj.buttonState == 0){
+		buttonObj.buttonState = 1;
+		document.getElementById(buttonObj.name).style.backgroundColor = "red";
+	} else if (buttonObj.buttonState == 1) {
+		buttonObj.buttonState = 0;
+		document.getElementById(buttonObj.name).style.backgroundColor = "white";
+	}
+}
 
 /* JAVASCRIPT ENDS HERE  */
 </script>
@@ -29,7 +41,7 @@ var clock = {
 <div>
 	<div><b><input type="text"></b></div>
 	<span>
-		<button id="but15" type="button" class="buttonbig" onclick="pushed('but15')">15:00</button><button id="but18" type="button" class="buttonbig" onclick="pushed()">18:00</button><button id="but21" type="button" class="buttonbig" onclick="pushed()">21:00</button><button id="but22" type="button" class="buttonsmall" onclick="pushed(but22)">22:00</button><button id="but23" type="button" class="buttonsmall" onclick="pushed(but23)">23:00</button><button id="but00" type="button" class="buttonsmall" onclick="pushed(but00)">00:00</button>
+		<button id="but15" type="button" class="buttonbig" onclick="pushed(but15)">15:00</button><button id="but18" type="button" class="buttonbig" onclick="pushed(but18)">18:00</button><button id="but21" type="button" class="buttonbig" onclick="pushed(but21)">21:00</button><button id="but22" type="button" class="buttonsmall" onclick="pushed(but22)">22:00</button><button id="but23" type="button" class="buttonsmall" onclick="pushed(but23)">23:00</button><button id="but00" type="button" class="buttonsmall" onclick="pushed(but00)">00:00</button>
 </span>
 </div>
 <div id="addbefore"></div>
